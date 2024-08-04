@@ -16,5 +16,6 @@ stack_t;
 stack_t *initialize_stack(void);
 void push(stack_t **stack, int value);
 void pall(stack_t **stack);
+void free_stack(stack_t **stack);
 
 #endif
