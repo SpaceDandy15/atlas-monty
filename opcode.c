@@ -10,7 +10,7 @@ void push(stack_t **stack, int value)
 	stack_t *new_node = malloc(sizeof(stack_t));
 	if (!new_node)
 	{
-		fprintf(stderr, "Error allocating memory\n")
+		fprintf(stderr, "Error allocating memory\n");
 		exit(EXIT_FAILURE);
 	}
 
