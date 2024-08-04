@@ -1,0 +1,1 @@
+i had to open my terminal and push from there but lets see if it pushes the regular way now.
