@@ -12,5 +12,4 @@ Before pushing, it checks if the next argument after push is a valid integer usi
 * Error Handling: The program checks for invalid usage of the push opcode by verifying that there is a valid integer argument following push. If the argument is not a valid integer,
  an error message is printed, and the program exits with a failure status.
 
-* Line Number: The line number in the error message is obtained using the __LINE_ macro, which gives the current line number in the source file.
-why is nothing pushing to githb?
+* Line Number: The line number in the error message is obtained using the __LINE_ macro, which gives the current line number in the source file
