@@ -9,7 +9,7 @@
  * Return: void
 */
 
-void parse_command(stack_t **stack, char *op, unsgined int line_num)
+void parse_command(stack_t **stack, char *op, unsigned int line_num)
 {
 	int i;
 	instruction_t ops[] = {
