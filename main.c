@@ -1,53 +1,29 @@
 #include "monty.h"
-#include <ctype.h> /** for isspace and isdigit*/
+
+stack_t **global_head;
+
+/**
+ * main - the root of the project
+ * @argc: how many arguments were passed to a program
+ * @argv: arguments vector
+ *
+ * Return: on success, always EXIT_SUCCESS
+*/
 
 int main(int argc, char *argv[])
 {
-	stack_t *stack = NULL;
-
-	if (argc != 2) 
+	stack_t *head;
+	
+	if (argc != 2)
 	{
-		fprintf(stderr, "USAGE: monty file\n");
-		exit(EXIT_FAILURE);
-	}
-	FILE *file = fopen(argv[1], "r");
-	if (!file) 
-	{
-		perror("Error opening file");
+		printf("USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
-	char *line = NULL;
-	size_t len = 0;
-	ssize_t read;
+		global_head = &head;
+		read_file(argv[1], &head);
 
-	while ((read = getline(&line, &len, file)) != -1)
-	{
-		if (isspace((unsigned char)*line) || *line == '#')
-		continue;
+		atexit(global_free);
 
-		char *opcode = strtok(line, " \t\n");
-		if (opcode && strcmp(opcode, "push") == 0)
-		{
-			int value = atoi(strtok(NULL, "\t\n"));
-			push(&stack, value);
-		}
-		else if (opcode && strcmp(opcode, "pall") == 0)
-		{
-			pall(&stack);
-		}
-		else
-		{
-			fprintf(stderr, "L%d: usage: push integer\n", __LINE__);
-			free_stack(&stack);
-			fclose(file);
-			free(line);
-			exit(EXIT_FAILURE);
-			}
-		}
-		
-	free(line);
-	fclose(file);
-	free_stack(&stack); /** frees the stack)*/
-	 return 0;
+		return (EXIT_SUCCESS);
 }
