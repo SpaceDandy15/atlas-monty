@@ -23,6 +23,8 @@ int main(int argc, char *argv[])
 		global_head = &head;
 		read_file(argv[1], &head);
 
+		global_free(); /** calling global free if needed*/
+
 		atexit(global_free);
 
 		return (EXIT_SUCCESS);

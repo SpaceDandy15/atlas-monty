@@ -20,6 +20,11 @@ void read_file(char *file, stack_t **stack)
 	fd = fopen(file, "r");
 	if (!fd)
 	{
+		perror("Error opening file");
+		exit(EXIT_FAILURE);
+	}
+
+	{
 		printf("Error: Can't open file %s\n", file);
 		exit(EXIT_FAILURE);
 	}
