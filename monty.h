@@ -5,11 +5,12 @@
 #include <stdio.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <sys/stat.h>
 #include <string.h>
-#include <stdbool.h>
-
-#define DELIMS "\n \r\t"
+#include <unistd.h>
+#include <sys/types.h>
+#include <ctype.h>
+#include <errno.h>
+#include <limits.h>
 
 /**
  * struct stack_s - doulby linked list representation of a stack (or queue)
@@ -44,13 +45,18 @@ typedef struct instruction_s
 }
 instruction_t;
 
+
 extern stack_t **global_head;
 
 void global_free(void);
 
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
-
+void _pint(stack_t **stack, unsigned int line_number)
+void _swap(stack_t **stack, unsigned int line_number);
+void _pop(stack_t **stack, unsigned int line_number);
+void _add(stack_t **stack, unsigned int line_number);
+void _nop(stack_t **stack, unsigned int line_number);
 void read_file(char *file, stack_t **stack);
 void parse_command(stack_t **stack, char *op, unsigned int line_num);
 
