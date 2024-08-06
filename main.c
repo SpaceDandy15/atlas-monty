@@ -18,7 +18,7 @@ int main(int ac, char **av)
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	file_header(av[1] &head);
+	file_reader(av[1] &head);
 	exit(EXIT_SUCCESS);
 }
 
@@ -86,7 +86,7 @@ void free_all(void)
 	tmp1 = *(globv.top);
 	while (tmp1 != NULL)
 	{
-		tmp2 = tmp->next;
+		tmp2 = tmp1->next;
 		free(tmp1);
 		tmp1 = tmp2;
 	}
