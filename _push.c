@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * push - pushes new node to the end of the stack
+ * _push - pushes new element to the stack
  * @stack: double pointer to the head of the the stack
- * @line_number: the number of a line of the file
+ * @line_number: script line number
  *
- * Return: void
+ * Return: no return
 */
-void push(stack_t **stack, unsigned int line_number)
+void _push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *element = malloc(sizeof(stack_t));
 	char *opcode;
@@ -21,7 +21,7 @@ void push(stack_t **stack, unsigned int line_number)
 	opcode = strtok(NULL, "\n\t\r ");
 	if (opcode == NULL || stack == NULL)
 	{
-		fprintf( stderr, "l%u: usage: push integer\n", line_number);
+		fprintf( stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	num = interpreter(opcode, line_number);
