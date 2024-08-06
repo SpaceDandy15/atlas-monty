@@ -4,7 +4,7 @@
  * parse_command - parses commands from the line op
  * @stack: the pointer to the head of the stack
  * @op: the line with commands/instructions
- * @line_num: an umber of the line
+ * @line_num: an number of the line
  *
  * Return: void
 */
@@ -24,7 +24,7 @@ void parse_command(stack_t **stack, char *op, unsigned int line_num)
 		ops[i].f(stack, line_num);
 		return;
 	}
-	if (strlen(op) !=0)
+	if (strlen(op) != 0)
 	{
 		printf("L%u: unknown instruction %s\n", line_num, op);
 		exit(EXIT_FAILURE);

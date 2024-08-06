@@ -14,7 +14,7 @@
 /**
  * struct stack_s - doulby linked list representation of a stack (or queue)
  * @n: ineger
- * @prev: points to the previous element o the stack (or queue)
+ * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next elemnt of the stack (or queue)
  *
  * Description: doubly linked list node structure

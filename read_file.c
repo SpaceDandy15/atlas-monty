@@ -3,7 +3,7 @@
 /**
  * read_file - reads file , line by line
  * @file: the name of the file
- * @stack: double pointer to top of teh stack
+ * @stack: double pointer to top of the stack
  *
  * Return: return an error code or success
 */
@@ -20,7 +20,7 @@ void read_file(char *file, stack_t **stack)
 	fd = fopen(file, "r");
 	if (!fd)
 	{
-		perror("Error opening file");
+		perror("Error: opening file");
 		exit(EXIT_FAILURE);
 	}
 
