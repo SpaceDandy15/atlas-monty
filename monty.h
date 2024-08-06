@@ -50,7 +50,19 @@ instruction_t;
  * @top: double pointer to top of stack
  * @ops: double pointer to an instruction stuct
 */
+typedef struct global_vars
+{
+	stack_t **top;
+	instruction_t **ops;
+} global_vars;
 
+extern glob_vars globv;
+
+/**
+ * stuct var_s - struct to contain the main variables of the Monty interpreter
+ * @queue: flag to determine if in stack vs queue mode
+ * @stack_len: length of the stack
+*/
 typedef struct var_s
 {
 	int queue;
