@@ -86,6 +86,7 @@ void _nop(stack_t **stack, unsigned int line_number);
 int file_reader(char *filename, stack_t **stack);
 void free_all(void);
 void stack_init(stack_t **head);
-
+int interpreter(char *num_string, unsigned int line_number);
+void get_po(stack_t **stack, char *op, unsigned int line_number);
 
 #endif
