@@ -29,7 +29,7 @@ int main(int ac, char **av)
  * Return: return an error code or success
 */
 
-int file_reader(char *filenmae, stack_t **stack)
+int file_reader(char *filename, stack_t **stack)
 {
 	size_t len;
 	ssize_t read;
