@@ -45,10 +45,24 @@ typedef struct instruction_s
 }
 instruction_t;
 
+/**
+ * stuct global_vars - globally useful variables, all rolled into one
+ * @top: double pointer to top of stack
+ * @ops: double pointer to an instruction stuct
+*/
 
-extern stack_t **global_head;
+typedef struct var_s
+{
+	int queue;
+	size_t stack_len;
+} var_t;
 
-void global_free(void);
+var_t var;
+
+extern var_t var;
+
+#define STACK 0
+#define QUEUE 1
 
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
@@ -57,7 +71,8 @@ void _swap(stack_t **stack, unsigned int line_number);
 void _pop(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);
-void read_file(char *file, stack_t **stack);
-void parse_command(stack_t **stack, char *op, unsigned int line_num);
+int file_reader(char *filename, stack_t **stack);
+void free_all(void);
+void stack_init(stack_t **head);
 
 #endif
