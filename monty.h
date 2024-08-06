@@ -54,7 +54,7 @@ typedef struct global_vars
 {
 	stack_t **top;
 	instruction_t **ops;
-} global_vars;
+} glob_vars;
 
 extern glob_vars globv;
 
