@@ -16,7 +16,7 @@ int interpreter(char *num_string, unsigned int line_number)
 	errno = 0;
 	val = strtol(num_string, &endptr, base);
 
-	if (errno == Erange && (val == LONG_MAX || val == LONG_MIN))
+	if (errno == ERANGE && (val == LONG_MAX || val == LONG_MIN))
 
 	{
 		exit(EXIT_FAILURE);
