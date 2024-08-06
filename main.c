@@ -1,6 +1,6 @@
 #include "monty.h"
 
-global_vars globv;
+glob_vars globv;
 
 /**
  * main - check code
@@ -18,7 +18,7 @@ int main(int ac, char **av)
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	file_reader(av[1] &head);
+	file_reader(av[1], &head);
 	exit(EXIT_SUCCESS);
 }
 
