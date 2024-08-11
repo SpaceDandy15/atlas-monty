@@ -11,7 +11,7 @@
 void get_po(stack_t **stac, char *op, unsigned int line_number)
 {
 	int i = 0;
-	instruction_t valid_opcode[] =
+	instruction_t valid_opcodes[] =
 	{
 		{"push", _push}, {"pchar", _pchar},
 		{"pall", _pall}, {"pstr", _pstr},
@@ -27,9 +27,9 @@ void get_po(stack_t **stac, char *op, unsigned int line_number)
 		{NULL, NULL}
 		};
 
-		for (i = 0; valid_opcode[i].opcode; i++)
+		for (i = 0; valid_opcodes[i].opcode; i++)
 		{
-			if (strcmp(op, valid_opcode[i].opcode) == 0)
+			if (strcmp(op, valid_opcodes[i].opcode) == 0)
 			{
 				valid_opcodes[i].f(stack, line_number);
 				return;
