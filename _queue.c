@@ -7,7 +7,7 @@
  *
  * Return: no return
 */
-void _queue.c(stack_t **stack, unsigned int line_number)
+void _queue(stack_t **stack, unsigned int line_number)
 {
 	(void)(stack);
 	(void)(line_number);
