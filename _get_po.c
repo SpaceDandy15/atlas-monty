@@ -8,7 +8,7 @@
  *
  * Return: no return
 */
-void get_po(stack_t **stac, char *op, unsigned int line_number)
+void get_po(stack_t **stack, char *op, unsigned int line_number)
 {
 	int i = 0;
 	instruction_t valid_opcodes[] =
