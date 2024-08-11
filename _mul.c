@@ -20,5 +20,5 @@ void _mul(stack_t **stack, unsigned int line_number)
 	}
 	temp_variable = (*stack)->n;
 	_pop(stack, line_number);
-	(*stack)->n = *= temp_variable;
+	(*stack)->n *= temp_variable;
 }

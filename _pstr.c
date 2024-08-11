@@ -19,7 +19,7 @@ void _pstr(stack_t **stack, unsigned int line_number)
 		printf("\n");
 		return;
 	}
-	while (temp-variable)
+	while (temp_variable)
 	{
 		if (isascii(temp_variable->n) && temp_variable->n !=0)
 		putchar(temp_variable->n);
