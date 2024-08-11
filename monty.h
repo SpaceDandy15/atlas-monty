@@ -88,5 +88,15 @@ void free_all(void);
 void stack_init(stack_t **head);
 int interpreter(char *num_string, unsigned int line_number);
 void get_po(stack_t **stack, char *op, unsigned int line_number);
+void _div(stack_t **stack, unsigned int line_number);
+void _mod(stack_t **stack, unsigned int line_number);
+void _mul(stack_t **stack, unsigned int line_number);
+void _pchar(stack_t **stack, unsigned int line_number);
+void _pstr(stack_t **stack, unsigned int line_number);
+void _queue(stack_t **stack, unsigned int line_number);
+void _rotl(stack_t **stack, unsigned int line_number);
+void _rotr(stack_t **stack, unsigned int line_number);
+void _stack(stack_t **stack, unsigned int line_number);
+void _sub(stack_t **stack, unsigned int line_number);
 
 #endif
