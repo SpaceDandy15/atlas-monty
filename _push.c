@@ -21,7 +21,7 @@ void _push(stack_t **stack, unsigned int line_number)
 	opcode = strtok(NULL, "\n\t\r ");
 	if (opcode == NULL || stack == NULL)
 	{
-		fprintf( stderr, "L%u: usage: push integer\n", line_number);
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	num = interpreter(opcode, line_number);
