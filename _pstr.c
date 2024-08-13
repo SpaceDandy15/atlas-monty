@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _pstr - funciton that prints the string starting at
+ * _pstr - function that prints the string starting at
  * the top of the stack
  * @stack: double pointer to the head of stack
  * @line_number: script line number

@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _rotr - function that rotates teh stack to the bottom
+ * _rotr - function that rotates the stack to the bottom
  * @stack: double pointer to the head of stack
  * @line_number: script line number
  *

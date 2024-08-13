@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _queue - funciton that sets the format of teh data to a queue (FIFO)
+ * _queue - function that sets the format of the data to a queue (FIFO)
  * @stack: double pointe ot hte head of stack
  * @line_number: script line number
  *

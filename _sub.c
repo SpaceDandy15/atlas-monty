@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _sub - funciton that subtracts teh top elment of the stack
+ * _sub - function that subtracts the top element of the stack
  * from the second top element of the stack
  * @stack: double pointer to the head of the stack
  * @line_number: script line number
