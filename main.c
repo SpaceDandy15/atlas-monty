@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/* Define the instructions array in main.c */
+instruction_t instructions[] = {
+    {"push", push},
+    {"pall", pall},
+    {NULL, NULL}
+};
+
 int main(int argc, char **argv)
 {
     FILE *file;
