@@ -13,6 +13,9 @@ glob_vars globv;
 int main(int ac, char **av)
 {
 	stack_t *head;
+
+	stack_inti(&head); /** intialize the stack*/
+
 	if (ac != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -66,7 +69,7 @@ int file_reader(char *filename, stack_t **stack)
  * stack_init - function that initializes all things.
  * @head: double pointer to top of stack.
  *
- * Reutrn: no return
+ * Return: no return
 */
 void stack_init(stack_t **head)
 {
