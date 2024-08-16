@@ -67,6 +67,7 @@ stack_t **stack, unsigned int line_number)
 {
 	instruction_t *instruction;
 
+
 	for (instruction = instructions; instruction->opcode != NULL; instruction++)
 	{
 		if (strcmp(opcode, instruction->opcode) == 0)
