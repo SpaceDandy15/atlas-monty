@@ -56,8 +56,8 @@ void process_file(FILE *file)
 	while (stack != NULL)
 	{
 		stack_t *temp = stack;
-		stack = stack->next;
 
+		stack = stack->next;
 		free(temp);
 	}
 }
