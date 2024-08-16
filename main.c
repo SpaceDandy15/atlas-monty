@@ -89,7 +89,8 @@ void process_file(FILE *file)
 }
 
 /**
- * execute_instuction - Executes the function corresponding to the given opcode.
+ * execute_instuction - Executes the function,
+ * corresponding to the given opcode.
  * @opcode: the opcode to execute.
  * @stack: double pointer to the stack.
  * @line_number: the line number in the file where the opcode is found.
