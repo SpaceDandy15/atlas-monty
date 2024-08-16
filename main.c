@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /** instructions array*/
-intstruction_t intstructions[] = {
+instruction_t instructions[] = {
 	{"push", push}
 	{"pall", pall}
 	{NULL, NULL}
