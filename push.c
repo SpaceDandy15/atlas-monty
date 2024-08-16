@@ -42,6 +42,7 @@ void push(stack_t **stack, unsigned int line_number)
  * @str: the string to check.
  *
  * Description: returns 1 if the string is a valid integer, otherwise 0.
+ * Return: 1 if the string is a valid integer, 0 otherwise.
 */
 int is_number(char *str)
 {
