@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /** instructions array*/
-intstruction_t intstructions [] = {
+intstruction_t intstructions[] = {
 	{"push", push}
 	{"pall", pall}
 	{NULL, NULL}
@@ -28,6 +28,7 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
+
 	while (getline(&line, &len, file) != -1)
 	{
 		line_number++;
@@ -35,11 +36,11 @@ int main(int argc, char **argv)
 		if (opcode == NULL || opcode [0] == '#')
 		continue;
 
-		for (instruction = instructions;instruction->opcode != NULL; instruction++)
+		for (instruction = instructions; instruction->opcode != NULL; instruction++)
 		{
-			if (strcmp(opcode, instructions->opcode) == 0)
+			if (strcmp(opcode, instruction->opcode) == 0)
 			{
-				instructions->f(&stack, line_number);
+				instruction->f(&stack, line_number);
 				break;
 			}
 		}
@@ -60,5 +61,5 @@ int main(int argc, char **argv)
 		stack = stack->next;
 		free(temp);
 	}
-	return (EXIT_SUCCESS)
+	return (EXIT_SUCCESS);
 }
