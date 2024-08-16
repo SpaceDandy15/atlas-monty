@@ -30,6 +30,17 @@ void process_file(FILE *file);
 void execute_instruction(char *opcode, stack_t **stack,
 unsigned int line_number);
 
+/**
+ * main - entry point of the monty interpreter.
+ * @argc: argument count.
+ * @argv: argument vector.
+ *
+ * Description: opens the monty bytecode file, processes it,
+ * and closes the file.
+ * if the file cannot be opened or the wrong number of arguments are given.
+ * the program exits with an error.
+ * Return: Always returns EXIT_SUCCESS.
+*/
 int main(int argc, char **argv)
 {
 	FILE *file;
