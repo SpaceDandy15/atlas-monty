@@ -1,5 +1,13 @@
 #include "monty.h"
 
+/**
+ * push - pushes an integer onto the stack.
+ * @stack: Double pointer to the stack.
+ * @line_number: the line number in the file where the opcode is found.
+ *
+ * Description: The integer is pushed onto the top of the stack. If the
+ * argument is not a valid integer, the function exits with an error.
+*/
 void push(stack_t **stack, unsigned int line_number)
 {
 	char *arg;
@@ -29,6 +37,12 @@ void push(stack_t **stack, unsigned int line_number)
 	*stack = new_node;
 }
 
+/**
+ * is_number - checks if a string is a valid integer.
+ * @str: the string to check.
+ *
+ * Description: returns 1 if the string is a valid integer, otherwise 0.
+*/
 int is_number(char *str)
 {
 	int i = 0;

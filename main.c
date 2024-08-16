@@ -1,11 +1,31 @@
 #include "monty.h"
+/**
+ * instruction_t instructions [] - Array of opcode-function pairs
+ * Each element contains an opcode string and a corresponding function pointer.
+*/
 instruction_t instructions[] = {
 	{"push", push},
 	{"pall", pall},
 	{NULL, NULL}
 };
 
+/**
+ * proccess_file - processes the Monty bytecode file.
+ * @file: file pointer to the monty bytecode file.
+ *
+ * Description: Reads each line of the file, extracts the opcode,
+ * and executes the corresponding function.
+*/
 void process_file(FILE *file);
+/**
+ * execute_instruction - Executes the appropriate function for a given opcode.
+ * @opcode: the opcode to execute
+ * @stack: pointer to the stack.
+ * @line_number: the current line number in the file.
+ *
+ * Description: Matches the opcode with the correct function in the
+ * instructions array and executes it.
+*/
 void execute_instruction(char *opcode, stack_t **stack,
 unsigned int line_number);
 
@@ -32,6 +52,12 @@ int main(int argc, char **argv)
 	return (EXIT_SUCCESS);
 }
 
+/**
+ * process_file - processes each line in the monty bytecode file.
+ * @file: file pointer to the monty bytecode file.
+ *
+ * Description: Reads the file line by line, extraction and executing opcodes.
+*/
 void process_file(FILE *file)
 {
 	char *line = NULL;
@@ -62,6 +88,16 @@ void process_file(FILE *file)
 	}
 }
 
+/**
+ * execute_instuction - Executes the function corresponding to the given opcode.
+ * @opcode: the opcode to execute.
+ * @stack: double pointer to the stack.
+ * @line_number: the line number in the file where the opcode is found.
+ *
+ * Description: searches for the opcode in the instructions array and
+ * calls the corresponding function. If the opcode is not found, it prints
+ * an error message and exits.
+*/
 void execute_instruction(char *opcode,
 stack_t **stack, unsigned int line_number)
 {
