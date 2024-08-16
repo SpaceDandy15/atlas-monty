@@ -2,8 +2,8 @@
 
 /** instructions array*/
 instruction_t instructions[] = {
-	{"push", push}
-	{"pall", pall}
+	{"push", push},
+	{"pall", pall},
 	{NULL, NULL}
 };
 
@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 
 		if (instruction->opcode == NULL)
 		{
-			fprtintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 			exit(EXIT_FAILURE);
 		}
 	}
