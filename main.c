@@ -45,7 +45,7 @@ void process_file(FILE *file)
 		char *opcode = strtok(line, " \n\t");
 
 		if (opcode == NULL || opcode[0] == '#')
-		
+
 		continue;
 
 		execute_instruction(opcode, &stack, line_number);
@@ -57,11 +57,13 @@ void process_file(FILE *file)
 	{
 		stack_t *temp = stack;
 		stack = stack->next;
+
 		free(temp);
 	}
 }
 
-void execute_instruction(char *opcode, stack_t **stack, unsigned int line_number)
+void execute_instruction(char *opcode,
+stack_t **stack, unsigned int line_number)
 {
 	instruction_t *instruction;
 
