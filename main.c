@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * instruction_t instructions [] - Array of opcode-function pairs
+ * instruction_t instructions [] = { - Array of opcode-function pairs
  * Each element contains an opcode string,
  * and a corresponding function pointer.
 */
