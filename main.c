@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 
 	process_file(file);
 	
-	flcose(file);
+	fclose(file);
 	return (EXIT_SUCCESS);
 }
 
