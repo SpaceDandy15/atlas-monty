@@ -1,6 +1,4 @@
 #include "monty.h"
-
-/** instructions array*/
 instruction_t instructions[] = {
 	{"push", push},
 	{"pall", pall},
@@ -8,7 +6,8 @@ instruction_t instructions[] = {
 };
 
 void process_file(FILE *file);
-void execute_instruction(char *opcode, stack_t **stack, unsigned int line_number);
+void execute_instruction(char *opcode, stack_t **stack,
+unsigned int line_number);
 
 int main(int argc, char **argv)
 {
@@ -28,7 +27,7 @@ int main(int argc, char **argv)
 	}
 
 	process_file(file);
-	
+
 	fclose(file);
 	return (EXIT_SUCCESS);
 }
@@ -44,6 +43,7 @@ void process_file(FILE *file)
 	{
 		line_number++;
 		char *opcode = strtok(line, " \n\t");
+
 		if (opcode == NULL || opcode[0] == '#')
 		
 		continue;
